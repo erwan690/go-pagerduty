@@ -1,4 +1,4 @@
-module github.com/PagerDuty/go-pagerduty
+module github.com/erwan690/go-pagerduty
 
 go 1.17
 

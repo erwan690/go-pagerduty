@@ -251,7 +251,7 @@ func (c *Client) CreateIncidentWithContext(ctx context.Context, from string, o *
 		"From": from,
 	}
 
-	// see: https://github.com/PagerDuty/go-pagerduty/issues/390
+	// see: https://github.com/erwan690/go-pagerduty/issues/390
 	o.Type = "incident"
 
 	d := map[string]*CreateIncidentOptions{
@@ -282,7 +282,7 @@ func (c *Client) ManageIncidents(from string, incidents []ManageIncidentsOptions
 // ManageIncidentsWithContext acknowledges, resolves, escalates, or reassigns
 // one or more incidents.
 func (c *Client) ManageIncidentsWithContext(ctx context.Context, from string, incidents []ManageIncidentsOptions) (*ListIncidentsResponse, error) {
-	// see: https://github.com/PagerDuty/go-pagerduty/issues/390
+	// see: https://github.com/erwan690/go-pagerduty/issues/390
 	for i := range incidents {
 		incidents[i].Type = "incident"
 	}
