@@ -1,12 +1,13 @@
 package main
 
 import (
-	"github.com/PagerDuty/go-pagerduty"
 	"log"
+
+	"github.com/erwan690/go-pagerduty"
 )
 
 func main() {
-	var key = "PagerDuty API Key"
+	key := "PagerDuty API Key"
 	event := pagerduty.Event{
 		Type:        "trigger",
 		ServiceKey:  key,

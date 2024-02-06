@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/PagerDuty/go-pagerduty/webhookv3"
+	"github.com/erwan690/go-pagerduty/webhookv3"
 )
 
 const (

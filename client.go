@@ -92,7 +92,7 @@ func unmarshalApiErrorObject(data []byte) (APIErrorObject, error) {
 	if _, ok := err.(*json.UnmarshalTypeError); !ok {
 		return aeo, nil
 	}
-	// See - https://github.com/PagerDuty/go-pagerduty/issues/339
+	// See - https://github.com/erwan690/go-pagerduty/issues/339
 	// TODO: remove when PagerDuty engineering confirms bugfix to the REST API
 	var fallback1 struct {
 		Code    int    `json:"code,omitempty"`
@@ -105,7 +105,7 @@ func unmarshalApiErrorObject(data []byte) (APIErrorObject, error) {
 		aeo.Errors = []string{fallback1.Errors}
 		return aeo, nil
 	}
-	// See - https://github.com/PagerDuty/go-pagerduty/issues/478
+	// See - https://github.com/erwan690/go-pagerduty/issues/478
 	var fallback2 []string
 	if json.Unmarshal(data, &fallback2) == nil {
 		aeo.Message = "none"
